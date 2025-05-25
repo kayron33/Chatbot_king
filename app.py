@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 import json
 import difflib
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Carrega o banco de perguntas e respostas
 with open('dados.json', 'r', encoding='utf-8') as f:
